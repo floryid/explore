@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<style>
+    /* Custom style for header and footer */
+    .bg-main {
+        background-image: linear-gradient(to right, #490ccc, #6f42c1);
+    }
+</style>
+<body class="font-sans bg-gray-100">
+   <!-- Navbar -->
+  
+   <body class="bg-gray-100">
+    <nav class="bg-gray-800 text-white py-4">
+      <div class="container mx-auto flex justify-between items-center px-4">
+          <div class="flex items-center w-full lg:w-auto">
+              <div class="mr-5 text-xl font-semibold">
+                  <i class="fas fa-code mr-1"></i> Your Logo
+              </div>
+              <div class="flex-grow"></div>
+              <ul class="nav-menu hidden lg:flex space-x-6 ml-5">
+                  <li><a href="#" class="hover:text-gray-300 flex items-center"><i class="fas fa-home mr-1"></i> Home</a></li>
+                  <li><a href="#" class="hover:text-gray-300 flex items-center"><i class="fas fa-file mr-1"></i> Page</a></li>
+                  <li><a href="index.html" class="hover:text-gray-300 flex items-center"><i class="fas fa-compass mr-1"></i> Explore</a></li>
+                  <li><a href="project.html" class="hover:text-gray-300 flex items-center"><i class="fas fa-briefcase mr-1"></i> Project</a></li>
+                  <li><a href="about.html" class="hover:text-gray-300 flex items-center"><i class="fas fa-info-circle mr-1"></i> About</a></li>
+                  <li class="mr-8"><a href="contact.html" class="hover:text-gray-300 flex items-center"><i class="fas fa-envelope mr-1"></i> Contact</a></li>
+              </ul>
+              
+              <div class="flex items-center hidden lg:block ml-5">  <!-- tambahkan ml-5 di sini -->
+                <form class="search-form" action="https://www.google.com/search" method="get" target="_blank">
+                  <input type="text" name="q" placeholder="Search..." class="bg-gray-700 text-white px-2 py-1 rounded focus:outline-none mr-2"/>
+                  <button type="submit" class="search-icon text-2xl cursor-pointer">
+                     <i class="fas fa-search"></i>
+                  </button>
+               </form>
+              </div>
+               <button class="lg:hidden focus:outline-none menu-toggle">
+                  <i class="fas fa-bars text-2xl"></i>
+              </button>
+          </div>
+      </div>
+      <div class="lg:hidden fixed top-0 left-0 h-full z-50">
+          <div class="nav-menu-responsive transform -translate-x-full transition-transform duration-300 ease-in-out bg-gray-800 text-center py-2 w-64 h-screen relative">
+           <button class="close-menu absolute top-2 right-2 focus:outline-none">
+             <i class="fas fa-times text-2xl"></i>
+            </button>
+              <ul class="pt-8">
+                  <li><a href="index.html" class="block py-2 hover:bg-gray-700 flex items-center justify-start pl-8"><i class="fas fa-home mr-1"></i> Home</a></li>
+                  <li><a href="#" class="block py-2 hover:bg-gray-700 flex items-center justify-start pl-8"><i class="fas fa-file mr-1"></i> Page</a></li>
+                  <li><a href="index.html" class="block py-2 hover:bg-gray-700 flex items-center justify-start pl-8"><i class="fas fa-compass mr-1"></i> Explore</a></li>
+                  <li><a href="project.html" class="block py-2 hover:bg-gray-700 flex items-center justify-start pl-8"><i class="fas fa-briefcase mr-1"></i> Project</a></li>
+                  <li><a href="about.html" class="block py-2 hover:bg-gray-700 flex items-center justify-start pl-8"><i class="fas fa-info-circle mr-1"></i> About</a></li>
+                  <li><a href="contact.html" class="block py-2 hover:bg-gray-700 flex items-center justify-start pl-8"><i class="fas fa-envelope mr-1"></i> Contact</a></li>
+              </ul>
+           </div>
+          <div class="overlay fixed top-0 left-0 w-full h-full bg-black opacity-50 z-40 hidden"></div>
+      </div>
+  </nav>
+
+<!-- Hero Section -->
+<header class="bg-main text-white text-center py-16">
+    <h1 class="text-4xl font-bold mb-4">Discover Stunning Destinations</h1>
+    <p class="text-lg">Explore the beauty of Indonesia's most beautiful places with a touch of adventure.</p>
+    <button class="mt-8 bg-yellow-500 text-blue-800 px-6 py-2 text-lg font-bold rounded-full hover:bg-yellow-400 transition">Start Exploring</button>
+</header>
+   <!-- Card Content -->
+   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-[100px]">
+      <!-- Card 1 -->
+      <div class="relative group cursor-pointer overflow-hidden rounded-xl">
+         <img src="./foto-p/pulau1 (3).png" alt="foto Sorong" class="w-full h-[400px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-105">
+         <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+         <div class="absolute bottom-[-50%] p-4 opacity-0 group-hover:bottom-0 group-hover:opacity-100 transition-all duration-500">
+            <h1 class="text-xl text-white  font-bold mb-2">Kota Sorong</h1>
+            <p class="text-sm text-white leading-relaxed">Kota Sorong adalah salah satu kota yang terletak di Provinsi Papua Barat Daya, Indonesia. Kota ini sering disebut sebagai "Pintu Gerbang Papua" karena posisinya yang strategis sebagai titik masuk utama ke wilayah Papua. Sorong adalah pusat transportasi, perdagangan, dan pariwisata di wilayah tersebut, terutama bagi mereka yang hendak menuju ke Raja Ampat, destinasi wisata terkenal dengan keindahan alam bawah lautnya.</p>
+            <button class="mt-4 bg-[#490ccc] px-4 py-2 text-white font-bold rounded-lg"><a href="explore.html">Explore</a></button>
+         </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="relative group cursor-pointer overflow-hidden rounded-xl">
+         <img src="./foto-p/pulau1 (1).png" alt="foto Aimas" class="w-full h-[400px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-105">
+         <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+         <div class="absolute bottom-[-50%] p-4 opacity-0 group-hover:bottom-0 group-hover:opacity-100 transition-all duration-500">
+            <h1 class="text-xl text-white font-bold mb-2">Pulau UM</h1>
+            <p class="text-sm text-white leading-relaxed">Pulau Um, yang terletak di Kota Sorong, Papua Barat, adalah destinasi wisata yang menakjubkan. Pulau kecil ini menawarkan keindahan alam yang masih sangat alami, dengan pantai berpasir putih dan air laut yang jernih. Dikelilingi oleh hutan tropis yang hijau, Pulau Um adalah tempat yang sempurna untuk menikmati ketenangan dan kedamaian.</p>
+            <button class="mt-4 bg-[#490ccc] px-4 py-2 text-white font-bold rounded-lg"> <a href="explore1.html">Explore</a></button>
+         </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="relative group cursor-pointer overflow-hidden rounded-xl">
+         <img src="./foto-p/pulau1 (2).png" alt="foto Raja Ampat" class="w-full h-[400px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-105">
+         <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+         <div class="absolute bottom-[-50%] p-4 opacity-0 group-hover:bottom-0 group-hover:opacity-100 transition-all duration-500">
+            <h1 class="text-xl text-white font-bold mb-2">Raja Ampat</h1>
+            <p class="text-sm text-white leading-relaxed">Raja Ampat, yang terletak di Papua Barat, adalah salah satu surga tersembunyi di Indonesia. Dengan keindahan alamnya yang memukau, Raja Ampat menawarkan pengalaman liburan yang tidak terlupakan. Pulau ini terkenal dengan keanekaragaman hayati lautnya, terumbu karang yang spektakuler, serta pantai-pantai berpasir putih yang dikelilingi oleh air jernih berwarna biru kehijauan.</p>
+            <button class="mt-4 bg-[#490ccc] px-4 py-2 text-white font-bold rounded-lg"> <a href="explore.html">Explore</a></button>
+         </div>
+      </div>
+   </div>
+   <header class="bg-main text-white text-center py-16">
+    <h1 class="text-4xl font-bold mb-4">Discover Stunning Destinations</h1>
+    <p class="text-lg">Explore the beauty of Indonesia's most beautiful places with a touch of adventure.</p>
+    <button class="mt-8 bg-yellow-500 text-blue-800 px-6 py-2 text-lg font-bold rounded-full hover:bg-yellow-400 transition">Start Exploring</button>
+</header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center h-screen" style="background-image: url('./foto-p/pulau1\ \(2\).png');">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="text-center text-white">
+                <h1 class="text-4xl font-bold mb-4">Selamat Datang di Pulau Matan</h1>
+                <p class="text-lg">Surga kecil di ujung Kota Sorong</p>
+                <a href="#details" class="mt-6 bg-yellow-500 text-blue-800 px-6 py-3 rounded-lg font-bold hover:bg-yellow-600">Pelajari Lebih Lanjut</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Pulau Matan -->
+    <section id="details" class="py-12 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-6">Tentang Pulau Matan</h2>
+            <p class="text-lg text-gray-600 text-center mb-8">
+                Pulau Matan, yang terletak di dekat Kota Sorong, Papua Barat, adalah destinasi sempurna bagi pecinta alam dan penggemar snorkeling. 
+                Pulau kecil ini menawarkan keindahan bawah laut yang luar biasa, pasir putih yang lembut, dan suasana yang tenang jauh dari keramaian.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <img src="./img/pulau-um.jpeg" alt="Pulau Matan" class="rounded-lg shadow-lg">
+                <div>
+                    <h3 class="text-2xl font-bold text-blue-800 mb-4">Aktivitas yang Bisa Dilakukan</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Snorkeling dan menyaksikan terumbu karang yang indah.</li>
+                        <li>Berjemur di atas pasir putih yang lembut.</li>
+                        <li>Mengeksplorasi hutan kecil di sekitar pulau.</li>
+                        <li>Menikmati matahari terbenam yang memukau.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-6">Galeri Pulau Matan</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <img src="./foto-p/pulau1 (1).png" alt="Laut Pulau Matan" class="rounded-lg shadow-lg">
+                <img src="./foto-p/pulau1 (2).png" alt="Terumbu Karang" class="rounded-lg shadow-lg">
+                <img src="./foto-p/pulau1 (3).png" alt="Matahari Terbenam" class="rounded-lg shadow-lg">
+                <img src="./foto-p/pulau1 (4).png" alt="Hutan Pulau Matan" class="rounded-lg shadow-lg">
+                <img src="./foto-p/pulau1 (5).png" alt="Pulau Matan dari Udara" class="rounded-lg shadow-lg">
+                <img src="./foto-p/pulau1 (6).png" alt="Perahu ke Pulau Matan" class="rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+    <!-- Main Content -->
+    <main class="container mx-auto mt-[100px] p-5">
+      <h1 class="text-4xl font-bold text-center text-blue-700 mb-8">Explore Pulau Um</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Left Section: Image -->
+          <div class="relative group cursor-pointer overflow-hidden rounded-xl">
+            <img src="./foto-p/pulau1 (3).png" alt="foto Aimas" class="w-full h-[400px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-105">
+            <div class="absolut inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute bottom-[-50%] p-4 opacity-0 group-hover:bottom-0 group-hover:opacity-100 transition-all duration-500">
+               <h1 class="text-xl text-white font-bold mb-2">Pulau UM</h1>
+               <p class="text-sm text-white leading-relaxed">Pulau Um, yang terletak di Kota Sorong, Papua Barat, adalah destinasi wisata yang menakjubkan. Pulau kecil ini menawarkan keindahan alam yang masih sangat alami, dengan pantai berpasir putih dan air laut yang jernih. Dikelilingi oleh hutan tropis yang hijau, Pulau Um adalah tempat yang sempurna untuk menikmati ketenangan dan kedamaian.</p>
+               <button class="mt-4 bg-[#490ccc] px-4 py-2 text-white font-bold rounded-lg"> <a href="explore1.html">Explore</a></button>
+            </div>
+         </div>
+          <!-- Right Section: Description -->
+          <div class="flex flex-col justify-center">
+              <p class="text-lg leading-relaxed mb-4">
+                  Pulau Um, yang terletak di Kota Sorong, Papua Barat, adalah destinasi wisata yang menakjubkan. Pulau kecil ini menawarkan keindahan alam yang masih sangat alami, dengan pantai berpasir putih dan air laut yang jernih. Dikelilingi oleh hutan tropis yang hijau, Pulau Um adalah tempat yang sempurna untuk menikmati ketenangan dan kedamaian.
+              </p>
+              <p class="text-lg leading-relaxed mb-4">
+                  Pulau ini sering dikunjungi oleh wisatawan lokal dan internasional yang mencari pengalaman berlibur yang unik dan jauh dari keramaian. Kegiatan populer di sini termasuk berenang, snorkeling, dan berjalan-jalan di sepanjang pantai untuk menikmati pemandangan yang memukau.
+              </p>
+              <p class="text-lg leading-relaxed">
+                  Pulau Um juga dikenal sebagai tempat yang ideal untuk piknik keluarga. Anda dapat menikmati waktu santai bersama orang-orang terdekat sambil menikmati makanan ringan di bawah rindangnya pohon. Jangan lupa untuk membawa kamera, karena setiap sudut Pulau Um menawarkan pemandangan yang Instagramable!
+              </p>
+          </div>
+      </div>
+
+      <!-- Highlights -->
+      <div class="mt-12">
+          <h2 class="text-3xl font-bold text-blue-700 mb-4 text-center">Highlights</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="bg-gray-800 rounded-lg p-4 text-center">
+                  <i class="fas fa-swimmer text-4xl text-blue-500 mb-3"></i>
+                  <h3 class="text-xl font-bold text-white">Snorkeling</h3>
+                  <p class="text-sm leading-relaxed text-white">Nikmati keindahan terumbu karang dan kehidupan laut yang mempesona di sekitar Pulau Um.</p>
+              </div>
+              <div class="bg-gray-800 rounded-lg p-4 text-center">
+                  <i class="fas fa-umbrella-beach text-4xl text-yellow-500 mb-3"></i>
+                  <h3 class="text-xl font-bold text-white">Pantai yang Indah</h3>
+                  <p class="text-sm leading-relaxed text-white">Bersantai di pantai berpasir putih dengan suara deburan ombak yang menenangkan.</p>
+              </div>
+              <div class="bg-gray-800 rounded-lg p-4 text-center">
+                  <i class="fas fa-tree text-4xl text-green-500 mb-3"></i>
+                  <h3 class="text-xl font-bold text-white">Hutan Tropis</h3>
+                  <p class="text-sm leading-relaxed text-white">Jelajahi keindahan hutan tropis di sekitar pulau dengan flora dan fauna yang unik.</p>
+              </div>
+          </div>
+      </div>
+  </main>
+
+   <!-- Main Content -->
+   <main class="container mx-auto mt-[100px] p-5">
+    <h1 class="text-4xl font-bold text-center mb-8">Explore Raja Ampat</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Left Section: Image -->
+        <div class="relative group cursor-pointer overflow-hidden rounded-xl">
+          <img src="./foto-p/pulau1 (6).png" alt="foto Raja Ampat" class="w-full h-[400px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="absolute bottom-[-50%] p-4 opacity-0 group-hover:bottom-0 group-hover:opacity-100 transition-all duration-500">
+             <h1 class="text-xl text-white font-bold mb-2">Raja Ampat</h1>
+             <p class="text-sm text-white leading-relaxed">Raja Ampat, yang terletak di Papua Barat, adalah salah satu surga tersembunyi di Indonesia. Dengan keindahan alamnya yang memukau, Raja Ampat menawarkan pengalaman liburan yang tidak terlupakan. Pulau ini terkenal dengan keanekaragaman hayati lautnya, terumbu karang yang spektakuler, serta pantai-pantai berpasir putih yang dikelilingi oleh air jernih berwarna biru kehijauan.</p>
+             <button class="mt-4 bg-[#490ccc] px-4 py-2 text-white font-bold rounded-lg"> <a href="explore.html">Explore</a></button>
+          </div>
+       </div>
+        <!-- Right Section: Description -->
+        <div class="flex flex-col justify-center">
+            <p class="text-lg leading-relaxed mb-4">
+                Raja Ampat, yang terletak di Papua Barat, adalah salah satu surga tersembunyi di Indonesia. Dengan keindahan alamnya yang memukau, Raja Ampat menawarkan pengalaman liburan yang tidak terlupakan. Pulau ini terkenal dengan keanekaragaman hayati lautnya, terumbu karang yang spektakuler, serta pantai-pantai berpasir putih yang dikelilingi oleh air jernih berwarna biru kehijauan.
+            </p>
+            <p class="text-lg leading-relaxed mb-4">
+                Aktivitas populer di Raja Ampat meliputi snorkeling, diving, dan eksplorasi pulau-pulau kecil yang eksotis. Tempat ini juga menjadi rumah bagi spesies langka seperti hiu karpet berjalan, ikan pari manta, dan berbagai jenis burung eksotis. Raja Ampat adalah destinasi impian bagi para pecinta alam dan petualangan.
+            </p>
+            <p class="text-lg leading-relaxed">
+                Jangan lewatkan kesempatan untuk menyaksikan pemandangan matahari terbenam yang luar biasa, serta menikmati keramahan masyarakat lokal yang hidup harmonis dengan alam. Raja Ampat bukan hanya tentang liburan, tetapi juga pengalaman yang memperkaya jiwa.
+            </p>
+        </div>
+    </div>
+
+    <!-- Highlights -->
+    <div class="mt-12">
+        <h2 class="text-3xl font-bold mb-4 text-center">Highlights</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-gray-800 rounded-lg p-4 text-center">
+                <i class="fas fa-water text-4xl text-blue-400 mb-3"></i>
+                <h3 class="text-xl font-bold text-white">Snorkeling & Diving</h3>
+                <p class="text-sm leading-relaxed text-white">Jelajahi keindahan bawah laut Raja Ampat dengan snorkeling dan diving di perairan yang kaya akan keanekaragaman hayati.</p>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4 text-center">
+                <i class="fas fa-mountain text-4xl text-green-400 mb-3"></i>
+                <h3 class="text-xl font-bold text-white">Pemandangan Spektakuler</h3>
+                <p class="text-sm leading-relaxed text-white">Nikmati pemandangan alam yang luar biasa, termasuk bukit karst, laguna biru, dan hutan tropis yang memukau.</p>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4 text-center">
+                <i class="fas fa-sun text-4xl text-yellow-400 mb-3"></i>
+                <h3 class="text-xl font-bold text-white">Matahari Terbenam</h3>
+                <p class="text-sm leading-relaxed text-white">Saksikan keindahan matahari terbenam yang memukau di atas laut dengan warna-warna emas dan merah yang mempesona.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-blue-800 mb-6">Hubungi Kami</h2>
+            <p class="text-lg text-gray-600 mb-6">Untuk informasi lebih lanjut atau pemesanan, jangan ragu untuk menghubungi kami!</p>
+            <a href="mailto:info@explorematan.com" class="bg-yellow-500 text-blue-800 px-6 py-3 rounded-lg font-bold hover:bg-yellow-600">Email Kami</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto text-center space-y-4">
+            <p>&copy; 2025 Your Website. All rights reserved.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="hover:text-gray-400"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+  
+     <!-- JavaScript for Menu Toggle -->
+     <script>
+      document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenuResponsive = document.querySelector('.nav-menu-responsive');
+  const overlay = document.querySelector('.overlay');
+  const closeMenu = document.querySelector('.close-menu');
+
+
+  menuToggle.addEventListener('click', function() {
+      navMenuResponsive.classList.toggle('-translate-x-full');
+      overlay.classList.toggle('hidden');
+  });
+
+  overlay.addEventListener('click',function() {
+      navMenuResponsive.classList.toggle('-translate-x-full');
+      overlay.classList.toggle('hidden');
+  });
+  
+  closeMenu.addEventListener('click', function() {
+      navMenuResponsive.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+  });
+});
+  </script>
+</body>
+</html>
