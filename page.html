@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Nofrinto Flory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-bold text-gray-800">Nofrinto Flory</h1>
+                </div>
+                <div class="hidden md:flex space-x-4">
+                    <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Home</a>
+                    <a href="project.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Project</a>
+                    <a href="page.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Page</a>
+                    <a href="#about" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">About Us</a>
+                    <a href="#team" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Team</a>
+                    <a href="#contact" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden bg-white shadow-lg">
+            <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Home</a>
+            <a href="project.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Project</a>
+            <a href="page.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Page</a>
+            <a href="#about" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">About Us</a>
+            <a href="#team" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Team</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-blue-500 text-white h-screen flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to My Page</h1>
+            <p class="text-lg md:text-xl">Discover more about Nofrinto Flory and the team.</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">About Us</h2>
+            <p class="text-lg text-gray-600">Nofrinto Flory is passionate about web development, cybersecurity, and innovation. Dedicated to creating solutions that matter.</p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-16 bg-gray-200 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Meet Our Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white shadow-lg rounded-lg p-4">
+                    <img src="./img/foto1.jpg" alt="Team Member" class="rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">Nofrinto Flory</h3>
+                    <p class="text-gray-600">Site Coordinator</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-4">
+                    <img src="./foto/Online Shop (8).png" alt="Team Member" class="rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">Jane Doe</h3>
+                    <p class="text-gray-600">Frontend Developer</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-4">
+                    <img src="./foto/Online Shop (6).png" alt="Team Member" class="rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">John Smith</h3>
+                    <p class="text-gray-600">Cybersecurity Expert</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+            <p class="text-lg text-gray-600 mb-6">Feel free to reach out to us for collaboration or inquiries.</p>
+            <a href="mailto:info@nofrintoflory.com" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4 text-center">
+        <p>&copy; 2025 Nofrinto Flory. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
