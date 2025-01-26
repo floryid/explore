@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Navbar with Toggle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Custom style for header and responsive menu */
+        .nav-menu-responsive {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 70%;
+            max-width: 300px;
+            height: 100%;
+            background-color: #1a202c;
+            z-index: 50;
+             transform: translateX(-100%); /* Initial hidden position */
+            transition: transform 0.3s ease;
+        }
+
+        .nav-menu-responsive.active {
+            transform: translateX(0); /* Show menu */
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 49; /* below the menu */
+            display: none;
+            transition: opacity 0.3s ease; /* Smooth transition for overlay */
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        footer i {
+            margin: 5px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        footer i:hover {
+            transform: scale(1.2);
+            box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5);
+        }
+
+        /* Add styles for dropdown content in menu */
+        .dropdown-content {
+            display: none;
+            background-color: #2d3748;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-roboto">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="text-xl font-semibold">
+                <i class="fas fa-code mr-1"></i> Nofrinto Flory
+            </div>
+            <ul class="hidden lg:flex space-x-6">
+                <li><a href="index.html" class="hover:text-gray-300"><i class="fas fa-home mr-1"></i> Home</a></li>
+                <li><a href="#" class="hover:text-gray-300"><i class="fas fa-file mr-1"></i> Page</a></li>
+                <li><a href="project.html" class="hover:text-gray-300"><i class="fas fa-briefcase mr-1"></i> Project</a></li>
+                <li><a href="about.html" class="hover:text-gray-300"><i class="fas fa-info-circle mr-1"></i> About</a></li>
+                <li><a href="contact.html" class="hover:text-gray-300"><i class="fas fa-envelope mr-1"></i> Contact</a></li>
+            </ul>
+            <button class="lg:hidden focus:outline-none menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Responsive Menu -->
+    <div class="nav-menu-responsive fixed top-0 left-0 bg-gray-800 text-white lg:hidden">
+        <div class="flex justify-between items-center p-4 border-b border-gray-700">
+           <h2 class="text-lg font-semibold">Menu</h2>
+            <button class="close-menu focus:outline-none">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+         </div>
+        <ul class="pt-4 space-y-4 text-center">
+            <li><a href="index.html" class="block py-2"><i class="fas fa-home mr-2"></i> Home</a></li>
+            <li><a href="#" class="block py-2"><i class="fas fa-file mr-2"></i> Page</a></li>
+            <li class="dropdown"><a href="project.html" class="block py-2"><i class="fas fa-briefcase mr-2"></i> Project</a></li>
+            <li><a href="about.html" class="block py-2"><i class="fas fa-info-circle mr-2"></i> About</a></li>
+            <li><a href="contact.html" class="block py-2"><i class="fas fa-envelope mr-2"></i> Contact</a></li>
+        </ul>
+    </div>
+    <div class="overlay"></div>
+
+
+    <!-- Hero Section -->
+    <section class="bg-gray-900 text-white py-20">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold mb-4">Welcome to Our Website</h1>
+            <p class="text-lg">Your one-stop solution for all your needs.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>© 2025 Nofrinto Flory. All rights reserved.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Handle menu toggle
+        const toggleButton = document.querySelector('.menu-toggle');
+        const menuResponsive = document.querySelector('.nav-menu-responsive');
+        const closeButton = document.querySelector('.close-menu');
+        const overlay = document.querySelector('.overlay');
+        let menuOpen = false;
+
+         function toggleMenu() {
+            menuResponsive.classList.toggle('active');
+            overlay.classList.toggle('active');
+            menuOpen = !menuOpen;
+         }
+         toggleButton.addEventListener('click', toggleMenu);
+         closeButton.addEventListener('click', toggleMenu);
+         overlay.addEventListener('click', toggleMenu);
+        // Handle dropdown toggle
+        const dropdowns = document.querySelectorAll('.dropdown');
+         dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', (e) => {
+                e.stopPropagation();
+                dropdown.classList.toggle('active');
+            });
+         });
+
+        // Close dropdown when clicking outside of the dropdown
+        document.addEventListener('click', (e) => {
+            dropdowns.forEach(dropdown => {
+                if (!dropdown.contains(e.target)) {
+                     dropdown.classList.remove('active');
+                }
+            });
+         });
+    </script>
+</body>
+
+</html>

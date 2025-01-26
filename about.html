@@ -53,27 +53,29 @@
         <div class="container mx-auto flex justify-between items-center px-4">
             <div class="flex items-center w-full lg:w-auto">
                 <div class="mr-5 text-xl font-semibold">
-                    <i class="fas fa-code mr-1">Nofrinto_Flory</i> 
+                    <i class="fas fa-code mr-1">Nofrinto_Flory</i>
                 </div>
                 <div class="flex-grow"></div>
                 <ul class="nav-menu hidden lg:flex space-x-6 ml-5">
                     <li><a href="index.html" class="hover:text-gray-300 flex items-center"><i class="fas fa-home mr-1"></i> Home</a></li>
-                    <li><a href="#" class="hover:text-gray-300 flex items-center"><i class="fas fa-file mr-1"></i> Page</a></li>
+                    <li><a href="page.html" class="hover:text-gray-300 flex items-center"><i class="fas fa-file mr-1"></i> Page</a></li>
                     <li><a href="index.html" class="hover:text-gray-300 flex items-center"><i class="fas fa-compass mr-1"></i> Explore</a></li>
                     <li><a href="project.html" class="hover:text-gray-300 flex items-center"><i class="fas fa-briefcase mr-1"></i> Project</a></li>
                     <li><a href="about.html" class="hover:text-gray-300 flex items-center"><i class="fas fa-info-circle mr-1"></i> About</a></li>
                     <li class="mr-8"><a href="contact.html" class="hover:text-gray-300 flex items-center"><i class="fas fa-envelope mr-1"></i> Contact</a></li>
                 </ul>
-                
-                <div class="flex items-center hidden lg:block ml-5">  <!-- tambahkan ml-5 di sini -->
-                  <form class="search-form" action="https://www.google.com/search" method="get" target="_blank">
-                    <input type="text" name="q" placeholder="Search..." class="bg-gray-700 text-white px-2 py-1 rounded focus:outline-none mr-2"/>
-                    <button type="submit" class="search-icon text-2xl cursor-pointer">
-                       <i class="fas fa-search"></i>
-                    </button>
-                 </form>
+
+                <div class="flex items-center hidden lg:block ml-5">
+                    <!-- tambahkan ml-5 di sini -->
+                    <form class="search-form" action="https://www.google.com/search" method="get" target="_blank">
+                        <input type="text" name="q" placeholder="Search..."
+                            class="bg-gray-700 text-white px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 mr-2" />
+                        <button type="submit" class="search-icon text-2xl cursor-pointer">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
                 </div>
-                 <button class="lg:hidden focus:outline-none menu-toggle">
+                <button class="lg:hidden focus:outline-none menu-toggle">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
@@ -84,8 +86,8 @@
                <i class="fas fa-times text-2xl"></i>
               </button>
                 <ul class="pt-8">
-                    <li><a href="#" class="block py-2 hover:bg-gray-700 flex items-center justify-start pl-8"><i class="fas fa-home mr-1"></i> Home</a></li>
-                    <li><a href="#" class="block py-2 hover:bg-gray-700 flex items-center justify-start pl-8"><i class="fas fa-file mr-1"></i> Page</a></li>
+                    <li><a href="index.html" class="block py-2 hover:bg-gray-700 flex items-center justify-start pl-8"><i class="fas fa-home mr-1"></i> Home</a></li>
+                    <li><a href="page.html" class="block py-2 hover:bg-gray-700 flex items-center justify-start pl-8"><i class="fas fa-file mr-1"></i> Page</a></li>
                     <li><a href="index.html" class="block py-2 hover:bg-gray-700 flex items-center justify-start pl-8"><i class="fas fa-compass mr-1"></i> Explore</a></li>
                     <li><a href="project.html" class="block py-2 hover:bg-gray-700 flex items-center justify-start pl-8"><i class="fas fa-briefcase mr-1"></i> Project</a></li>
                     <li><a href="about.html" class="block py-2 hover:bg-gray-700 flex items-center justify-start pl-8"><i class="fas fa-info-circle mr-1"></i> About</a></li>
@@ -163,7 +165,7 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto text-center space-y-4">
-            <p>&copy; 2025 Nofrinto_Flory. All rights reserved.</p>
+            <p>© 2025 Nofrinto_Flory. All rights reserved.</p>
             <div class="flex justify-center space-x-4">
                 <a href="#" class="hover:text-gray-400"><i class="fab fa-facebook-f text-blue-800"></i></a>
                 <a href="#" class="hover:text-gray-400"><i class="fab fa-twitter text-blue-400"></i></a>
@@ -172,31 +174,35 @@
             </div>
         </div>
     </footer>
-    
+
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenuResponsive = document.querySelector('.nav-menu-responsive');
-    const overlay = document.querySelector('.overlay');
-    const closeMenu = document.querySelector('.close-menu');
-  
-  
-    menuToggle.addEventListener('click', function() {
-        navMenuResponsive.classList.toggle('-translate-x-full');
-        overlay.classList.toggle('hidden');
-    });
-  
-    overlay.addEventListener('click',function() {
-        navMenuResponsive.classList.toggle('-translate-x-full');
-        overlay.classList.toggle('hidden');
-    });
-    
-    closeMenu.addEventListener('click', function() {
-        navMenuResponsive.classList.add('-translate-x-full');
-        overlay.classList.add('hidden');
-    });
-  });
+        // Ambil elemen menu toggle dan menu responsive
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenuResponsive = document.querySelector('.nav-menu-responsive');
+        const closeMenu = document.querySelector('.close-menu');
+        const overlay = document.querySelector('.overlay');
+
+        // Event untuk membuka menu
+        menuToggle.addEventListener('click', () => {
+            navMenuResponsive.classList.remove('-translate-x-full');
+            navMenuResponsive.classList.add('translate-x-0');
+            overlay.classList.remove('hidden');
+        });
+
+        // Event untuk menutup menu
+        closeMenu.addEventListener('click', () => {
+            navMenuResponsive.classList.add('-translate-x-full');
+            navMenuResponsive.classList.remove('translate-x-0');
+            overlay.classList.add('hidden');
+        });
+
+        // Event untuk menutup menu saat overlay ditekan
+        overlay.addEventListener('click', () => {
+            navMenuResponsive.classList.add('-translate-x-full');
+            navMenuResponsive.classList.remove('translate-x-0');
+            overlay.classList.add('hidden');
+        });
     </script>
 
 </body>
